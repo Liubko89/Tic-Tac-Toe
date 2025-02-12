@@ -1,0 +1,8 @@
+.cicle {
+  width: 80%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 8px solid #f1f97b;
+  box-shadow: #f1f97b 2px 2px 4px 8px;
+  margin: 0 auto;
+}

@@ -1,0 +1,27 @@
+.header {
+  padding: 8px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 75vh;
+
+  .title {
+    text-align: center;
+  }
+
+  .next {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+
+    .cross {
+      font-family: "Roboto", Times, sans-serif;
+      color: #105bf2;
+    }
+
+    .cicle {
+      font-family: "Roboto", Times, sans-serif;
+      color: #48f210;
+    }
+  }
+}
