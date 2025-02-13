@@ -3,7 +3,7 @@ import "./App.css";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Container from "./components/Container/Container";
 import Header from "./components/Header/Header";
-import Cicle from "./components/Cicle/Cicle";
+import Circle from "./components/Circle/Circle";
 import Cross from "./components/Cross/Cross";
 import { useEffect, useState } from "react";
 import { checkWinner } from "./helpers/checkWinner";
@@ -13,18 +13,18 @@ function App() {
   const field = Array(9).fill(null);
   const [next, setNext] = useState("cross");
   const [cross, setCross] = useState([]);
-  const [cicle, setCicle] = useState([]);
+  const [circle, setCircle] = useState([]);
   const [checked, setChecked] = useState([]);
   const [winner, setWinner] = useState(null);
 
   const changeNext = () => {
-    setNext((prev) => (prev === "cross" ? "cicle" : "cross"));
+    setNext((prev) => (prev === "cross" ? "circle" : "cross"));
   };
   const selectCroos = (index) => {
     setCross((prev) => [...prev, index]);
   };
-  const selectCicle = (index) => {
-    setCicle((prev) => [...prev, index]);
+  const selectCircle = (index) => {
+    setCircle((prev) => [...prev, index]);
   };
 
   const handleChecked = (index) => {
@@ -34,13 +34,13 @@ function App() {
   const handleReset = () => {
     setNext("cross");
     setCross([]);
-    setCicle([]);
+    setCircle([]);
     setChecked([]);
   };
 
   useEffect(() => {
-    setWinner(checkWinner(cross, cicle));
-  }, [cross, cicle]);
+    setWinner(checkWinner(cross, circle));
+  }, [cross, circle]);
 
   return (
     <>
@@ -53,12 +53,12 @@ function App() {
             next={next}
             changeNext={changeNext}
             selectCroos={selectCroos}
-            selectCicle={selectCicle}
+            selectCircle={selectCircle}
             handleChecked={handleChecked}
             disabled={checked.includes(i)}
           >
             {cross.includes(i) && <Cross />}
-            {cicle.includes(i) && <Cicle />}
+            {circle.includes(i) && <Circle />}
           </Container>
         ))}
 

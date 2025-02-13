@@ -1,4 +1,4 @@
-export const checkWinner = (cross, cicle) => {
+export const checkWinner = (cross, circle) => {
   const winCombination = [
     [0, 1, 2],
     [3, 4, 5],
@@ -14,8 +14,8 @@ export const checkWinner = (cross, cicle) => {
     const [a, b, c] = winCombination[i];
     if (cross.includes(a) && cross.includes(b) && cross.includes(c)) {
       return "cross";
-    } else if (cicle.includes(a) && cicle.includes(b) && cicle.includes(c)) {
-      return "cicle";
+    } else if (circle.includes(a) && circle.includes(b) && circle.includes(c)) {
+      return "circle";
     }
   }
   return null;

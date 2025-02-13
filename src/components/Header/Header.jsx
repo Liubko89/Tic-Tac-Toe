@@ -10,7 +10,7 @@ const Header = ({ next }) => {
           {next === "cross" ? (
             <p className={css.cross}>x</p>
           ) : (
-            <p className={css.cicle}>o</p>
+            <p className={css.circle}>o</p>
           )}
         </div>
       </div>

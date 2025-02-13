@@ -14,12 +14,18 @@
     align-items: center;
     gap: 8px;
 
+    p {
+      font-size: 32px;
+    }
+
     .cross {
+      font-size: 32px;
       font-family: "Roboto", Times, sans-serif;
       color: #105bf2;
     }
 
-    .cicle {
+    .circle {
+      font-size: 32px;
       font-family: "Roboto", Times, sans-serif;
       color: #48f210;
     }

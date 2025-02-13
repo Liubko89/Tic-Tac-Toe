@@ -7,7 +7,7 @@ const Container = ({
   next,
   changeNext,
   selectCroos,
-  selectCicle,
+  selectCircle,
   children,
   handleChecked,
   disabled,
@@ -17,7 +17,7 @@ const Container = ({
     if (next === "cross") {
       selectCroos(index);
     } else {
-      selectCicle(index);
+      selectCircle(index);
     }
     handleChecked(index);
   };
